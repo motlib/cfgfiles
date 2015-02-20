@@ -1,4 +1,4 @@
-
+;; Emacs config file by Motlib
 
 ;; Enable line and column numbers
 (line-number-mode t)
@@ -18,12 +18,6 @@
 (setq-default c-default-style "linux")
 (add-hook 'c-mode-common-hook '(lambda () (define-key c-mode-map "\C-m" 'newline-and-indent)))
 
-
-;; automatic indent new lines
-;; DOES NOT WORK
-;;(define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
-
 ;; save minibuffer history
 (load-library "savehist")
 (savehist-mode t)
-
