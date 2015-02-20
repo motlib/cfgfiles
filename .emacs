@@ -1,4 +1,6 @@
 ;; Emacs config file by Motlib
+;;
+;; Set up for use of emacs 23 on a color terminal. No GUI use.
 
 ;; Enable line and column numbers
 (line-number-mode t)
