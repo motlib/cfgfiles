@@ -41,8 +41,8 @@
 ;; Set the default font face for Windows Emacs.
 (set-face-attribute 'default nil :font "Source Code Pro-10")
 
-;; Select a color theme
-(load-theme 'wheatgrass t)
+;; Select a color theme - does not work on raspbian
+;; (load-theme 'wheatgrass t)
 
 ;; fill column indicator
 ;; download library from http://www.emacswiki.org/emacs/FillColumnIndicator)
