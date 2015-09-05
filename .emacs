@@ -1,9 +1,13 @@
-;; $Id: .emacs 70 2015-08-10 03:32:11Z andreas $
 ;;
 ;; Config file for emacs
 ;;
+;; Author: Andreas Schroeder <andreas@a-netz.de>
+;;
 
-;; Enable line and column numbers
+;; General Text Editing Settings
+;; =============================
+
+;; Enable line and column number display in the mode line
 (line-number-mode t)
 (column-number-mode t)
 
@@ -13,12 +17,19 @@
 ;; Turn on auto-fill mode by default
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
-;; disable menubar, toolbar and scrollbar
+;; We want to use pure text-mode emacs, so disable menubar, toolbar
+;; and scrollbar.
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
+;; Save history of input into minibuffer.
+(load-library "savehist")
+(savehist-mode t)
 
+
+;; Settings for Software Development
+;; =================================
 
 ;; Set indentation to 4 spaces, non-indented brackets and automatic 
 ;; indentation after line-feed
@@ -26,14 +37,6 @@
 (setq-default c-default-style "linux")
 (add-hook 'c-mode-common-hook '(lambda () (define-key c-mode-map "\C-m" 'newline-and-indent)))
 
-
-;; automatic indent new lines
-;; DOES NOT WORK
-;;(define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
-
-;; save minibuffer history
-(load-library "savehist")
-(savehist-mode t)
 
 
 ;; User Interface Options, look and feel
