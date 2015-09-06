@@ -7,6 +7,9 @@
 ;; General Text Editing Settings
 ;; =============================
 
+;; Extend the load path to user specific scripts.
+(add-to-list 'load-path "~/.emacs.d/list/")
+
 ;; Enable line and column number display in the mode line
 (line-number-mode t)
 (column-number-mode t)
@@ -26,6 +29,9 @@
 ;; Save history of input into minibuffer.
 (load-library "savehist")
 (savehist-mode t)
+
+;; Load library to support yaml mode. 
+(load-library "yaml-mode")
 
 
 ;; Settings for Software Development
