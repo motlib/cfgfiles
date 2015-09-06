@@ -8,7 +8,7 @@
 ;; =============================
 
 ;; Extend the load path to user specific scripts.
-(add-to-list 'load-path "~/.emacs.d/list/")
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 
 ;; Enable line and column number display in the mode line
 (line-number-mode t)
