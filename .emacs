@@ -7,6 +7,10 @@
 ;; General Text Editing Settings
 ;; =============================
 
+;; bind shift-space to mark command additionally to ctrl-space (does
+;; not work on android-ssh)
+(global-set-key (kbd "S-SPC") 'set-mark-command)
+
 ;; Extend the load path to user specific scripts.
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
