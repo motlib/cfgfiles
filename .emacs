@@ -55,7 +55,7 @@
 ;; Select a color theme - does not work on raspbian, because emacs
 ;; version 23 used there.
 (if (>= emacs-major-version 24)
-    (load-theme 'wheatgrass t))
+    (load-theme 'misterioso t))
 
 ;; fill column indicator
 ;; download library from http://www.emacswiki.org/emacs/FillColumnIndicator)
