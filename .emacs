@@ -37,6 +37,8 @@
 ;; Load library to support yaml mode. 
 (load-library "yaml-mode")
 
+;; Load library to show fill collumn indicator
+(load-library "fill-column-indicator")
 
 ;; Settings for Software Development
 ;; =================================
@@ -44,7 +46,9 @@
 ;; Set indentation to 4 spaces, non-indented brackets and automatic 
 ;; indentation after line-feed
 (setq-default c-basic-offset 4)
-(setq-default c-default-style "linux")
+(setq-default indent-tabs-mode nil)
+(setq-default c-default-style "bsd")
+(c-set-offset 'arglist-intro '+)
 (add-hook 'c-mode-common-hook
 	  '(lambda () (define-key c-mode-map "\C-m" 'newline-and-indent)))
 
@@ -54,7 +58,7 @@
 
 ;; Set the default font face for Windows Emacs.
 (if (string-equal system-type "windows-nt")
-    (set-face-attribute 'default nil :font "Source Code Pro-10"))
+    (set-face-attribute 'default nil :font "Source Code Pro-10:bold"))
 
 ;; Select a color theme - does not work on raspbian, because emacs
 ;; version 23 used there.
@@ -83,3 +87,19 @@
   kept-old-versions 2
   version-control t)
 
+(put 'downcase-region 'disabled nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(mediawiki-site-alist
+   (quote
+    (("Wikipedia" "http://en.wikipedia.org/w/" "username" "password" "Main Page")
+     ("aee" "http://aee.cn.kostal.int/wiki" "schroe03" "Konepari13$" "Main Page")))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
