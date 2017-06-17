@@ -6,7 +6,7 @@
 #
 
 # List of files to install
-CFGFILES=".emacs .emacs.d .tmux.conf"
+CFGFILES=".emacs .emacs.d .tmux.conf .gitconfig"
 
 
 CFGDIR=`dirname $0`

@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Andreas Schroeder
+	email = andreas@a-netz.de
+[push]
+	default = simple
