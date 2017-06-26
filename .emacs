@@ -89,6 +89,9 @@
 
 (setq inhibit-startup-screen 1)
 
+;; set up neotree
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
-(setq neo-theme 'ascii) 
+(setq neo-theme 'ascii)
+;; neotree window is not fixed width
+(setq neo-window-fixed-size 'nil)
