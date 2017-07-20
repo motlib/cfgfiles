@@ -40,6 +40,9 @@
 ;; Load library to show fill collumn indicator
 (load-library "fill-column-indicator")
 
+;; Load support for markdown mode
+(load-library "markdown-mode")
+
 ;; Settings for Software Development
 ;; =================================
 
