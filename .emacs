@@ -21,9 +21,6 @@
 ;; highlight matching parentheses
 (show-paren-mode t)
 
-;; Turn on auto-fill mode by default
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
-
 ;; We want to control emacs by keyboard, so disable menubar, toolbar
 ;; and scrollbar.
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -37,8 +34,14 @@
 ;; Load library to support yaml mode. 
 (load-library "yaml-mode")
 
+;; Filling Settings
 ;; Load library to show fill collumn indicator
+(setq-default fill-column 80)
 (load-library "fill-column-indicator")
+(add-hook 'text-mode-hook 'fci-mode)
+;; Turn on auto-fill mode by default
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+
 
 ;; Settings for Software Development
 ;; =================================
@@ -65,10 +68,6 @@
 (if (>= emacs-major-version 24)
     (load-theme 'misterioso t))
 
-;; fill column indicator
-;; download library from http://www.emacswiki.org/emacs/FillColumnIndicator)
-;(load-library "fill-column-indicator")
-;(add-hook 'c-mode-hook 'fci-mode)
 
 
 ;; Backup files config
