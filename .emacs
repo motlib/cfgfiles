@@ -43,6 +43,9 @@
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 
+;; Load support for markdown mode
+(load-library "markdown-mode")
+
 ;; Settings for Software Development
 ;; =================================
 
