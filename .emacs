@@ -41,6 +41,7 @@
 (add-hook 'text-mode-hook 'fci-mode)
 ;; Turn on auto-fill mode by default
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
+(add-hook 'c-mode-hook 'fci-mode)
 
 
 ;; Load support for markdown mode
@@ -97,3 +98,9 @@
 (setq neo-theme 'ascii)
 ;; neotree window is not fixed width
 (setq neo-window-fixed-size 'nil)
+
+;; Hotkeys to simplify resizing windows
+(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-<down>") 'shrink-window)
+(global-set-key (kbd "S-C-<up>") 'enlarge-window)
