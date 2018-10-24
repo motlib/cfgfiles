@@ -11,6 +11,10 @@
 ;; not work on android-ssh)
 (global-set-key (kbd "S-SPC") 'set-mark-command)
 
+;; enable commands for upper-case and lower-case region
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+
 ;; Extend the load path to user specific scripts.
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
@@ -42,6 +46,7 @@
 ;; Turn on auto-fill mode by default
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'c-mode-hook 'fci-mode)
+(add-hook 'python-mode-hook 'fci-mode)
 
 
 ;; Load support for markdown mode
