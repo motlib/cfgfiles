@@ -7,6 +7,11 @@
 ;; General Text Editing Settings
 ;; =============================
 
+;; configure package manager
+(require 'package)
+(add-to-list 'package-archives (cons "melpa" "https://melpa.org/packages/") t)
+(package-initialize)
+
 ;; bind shift-space to mark command additionally to ctrl-space (does
 ;; not work on android-ssh)
 (global-set-key (kbd "S-SPC") 'set-mark-command)
@@ -109,3 +114,15 @@
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (yaml-mode markdown-mode php-mode neotree))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

@@ -1,10 +1,13 @@
-*
+/*
 
 !README.md
 !.gitignore
 
 !.emacs
-.emacs.d/history
-.emacs.d/auto-save-list
+!/.emacs.d
+/.emacs.d/history
+/.emacs.d/auto-save-list
+/.emacs.d/elpa/archives/
+*.elc
 
 !.tmux.conf
