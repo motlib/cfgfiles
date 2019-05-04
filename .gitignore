@@ -1,2 +1,6 @@
+*
+!.emacs
 .emacs.d/history
 .emacs.d/auto-save-list
+!.gitignore
+!.tmux.conf
