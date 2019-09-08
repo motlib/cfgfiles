@@ -69,6 +69,9 @@
 (add-hook 'c-mode-common-hook
 	  '(lambda () (define-key c-mode-map "\C-m" 'newline-and-indent)))
 
+(add-hook 'python-mode-hook
+          (lambda () (add-to-list 'write-file-functions 'delete-trailing-whitespace)))
+
 
 ;; User Interface Options
 ;; ======================
