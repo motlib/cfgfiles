@@ -1,9 +1,9 @@
 # CfgFiles
 
-This repository contains some of my configuration files from my home directory. 
+This repository contains some of my configuration files from my Linux home directory. 
 
-The `.gitignore` file is set up to ignore all files, but then exclude some
-(i.e. not ignore them again) by prepending the exclamation mark. 
+The `.gitignore` file is set up to ignore all files, but then exclude some files 
+from the ignore list (i.e. not ignore them again) by prepending the exclamation mark. 
 
 ## Usage
 
